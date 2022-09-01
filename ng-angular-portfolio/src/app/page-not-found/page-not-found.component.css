@@ -1,4 +1,156 @@
-p {
-    font-size: 8em;
-    color: aliceblue;
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #161616;
+}
+
+section .redirection-404 {
+    position: absolute;
+    top: 10%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: antiquewhite;
+    filter: drop-shadow(0 0 20px);
+    animation: redirection-button;
+    animation-delay: 3s;
+}
+a:visited{
+    color: antiquewhite;
+}
+
+.mug {
+    position: relative;
+    width: 300px;
+    height: 330px;
+    background: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 50px 100px;
+    border-bottom-left-radius: 130px 200px;
+    border-bottom-right-radius: 130px 200px;
+    border-top-right-radius: 50px 100px;
+    border: 3px solid transparent;
+    animation: balancing-mug 5s linear infinite;
+    animation-delay: 3s;
+}
+
+.mug::before{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 18px;
+    width: 78%;
+    height: 20px;
+    border: 15px solid #444;
+    border-radius: 50%;
+    box-shadow: 0 7px #222;
+}
+
+.tea {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: #327e22;
+    border-bottom-left-radius: 220px 240px;
+    border-bottom-right-radius: 220px 240px;
+    filter: drop-shadow(0 0 120px #327e22);
+    animation: balancing-tea 5s linear infinite;
+    animation-delay: 3s;
+    transform-origin: top center;
+}
+
+.tea::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 20px;
+    background: #296d1c;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 120px #327e22);
+}
+
+.mug_shadow {
+    position: absolute;
+    top: calc(50% + 150px);
+    transform: translate(-50, -50);
+    height: 30px;
+    width: 320px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+section .rollingCookie {
+    position: absolute;
+    top: 47%;
+    left: -200px;
+    animation: rolling-effect 6s linear alternate;
+    pointer-events: none;
+}
+
+@keyframes rolling-effect {
+    0%{
+        left: -5%;
+    }
+    15%{
+        transform: rotate(90deg);
+    }
+    35%{
+        transform: rotate(160deg);
+    }
+    50%{
+        left: 33%;
+        transform: rotate(240deg);
+    }
+    100%{
+        left: -5%;
+    }
+}
+
+@keyframes balancing-mug {
+    0%{
+        transform: rotate();
+    }
+    25%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate();
+    }
+    75%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate();
+    }
+}
+
+@keyframes balancing-tea {
+    0%{
+        transform: rotate();
+    }
+    25%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate();
+    }
+    75%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate();
+    }
+}
+
+@keyframes redirection-button {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
