@@ -13,14 +13,5 @@ export class WelcomeComponent implements OnInit {
       for(let i = 0 ; i < welcomeEffect.length ; i++ ) {
         console.log(`Letter ${i} is ${welcomeEffect[i].getTotalLength()}`);
       }
-
-      // element of the DOM used to move the indicator element on the navbar.
-      const navbarElement = document.querySelectorAll('.navbarElement');
-      const indicator = document.querySelector('.menuElement');
-
-      // function to focus the indicator element
-      function movingIndicator(event) {
-        indicator
-      }
   }
 }
