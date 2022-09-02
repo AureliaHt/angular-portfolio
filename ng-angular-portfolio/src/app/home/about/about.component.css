@@ -1,11 +1,156 @@
 .aboutSection {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
-    width: 100%;
     background: radial-gradient(#2c2c2c, #0f0f0f);
 }
+
+.totoroInspirationTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15vh;
+}
+
+.aboutSection .totoroInspirationTop div {
+    position: absolute;
+    display: block;
+    left: -10%;
+}
+
+.aboutSection .totoroInspirationTop div:nth-child(1) {
+    animation: dancing-cookies 10s linear infinite;
+}
+
+.aboutSection .totoroInspirationTop div:nth-child(2) {
+    animation: dancing-cookies 10s linear infinite;
+    animation-delay: 1s;
+}
+
+.aboutSection .totoroInspirationTop div:nth-child(3) {
+    animation: dancing-cookies 10s linear infinite;
+    animation-delay: 2s;
+}
+
+.aboutSection .totoroInspirationTop div:nth-child(4) {
+    animation: dancing-cookies 10s linear infinite;
+    animation-delay: 3s;
+}
+
+.aboutSection .totoroInspirationTop div:nth-child(5) {
+    animation: dancing-cookies 10s linear infinite;
+    animation-delay: 4s;
+}
+
+.aboutSection .totoroInspirationTop div:nth-child(6) {
+    animation: dancing-cookies 10s linear infinite;
+    animation-delay: 5s;
+}
+
+.aboutSection .totoroInspirationTop div:nth-child(7) {
+    animation: dancing-cookies 10s linear infinite;
+    animation-delay: 6s;
+}
+
+.aboutSection .totoroInspirationTop div:nth-child(8) {
+    animation: dancing-cookies 10s linear infinite;
+    animation-delay: 7s;
+}
+
+.aboutSection .totoroInspirationTop div:nth-child(9) {
+    animation: dancing-cookies 10s linear infinite;
+    animation-delay: 8s;
+}
+
+.aboutSection .totoroInspirationTop div:nth-child(10) {
+    animation: dancing-cookies 10s linear infinite;
+    animation-delay: 9s;
+}
+
+@keyframes dancing-cookies {
+    0% {
+        left: -5%;
+        opacity: 0;
+    }
+    5%{
+        top: 0.25rem;
+    }
+    15%{
+        opacity: 1;
+        top: 0.5rem;
+        transform: rotate(90deg);
+    }
+    30%{
+        top: 4rem;
+        transform: rotate(180deg);
+    }
+    60% {
+        top: 0.5rem;
+        transform: rotate(250deg);
+    }
+    90%{
+        opacity: 1;
+    }
+    98%{
+        opacity: 0.1;
+        top: 4rem;
+        transform: rotate(360deg);
+    }
+    100%{
+        left: 95%;
+        opacity: 0;
+    }
+}
+
+.mainSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 17rem;
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    margin-top: 1.25rem;
+
+}
+
+ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 3.25rem;
+    letter-spacing: 2px;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(207, 206, 206, 0.5);
+}
+
+ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 6px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+}
+
+ul li a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+} 
 
 .loremSection {
     width: 30%;
